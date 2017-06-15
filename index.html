@@ -3,12 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/base.css">
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/bmob/bmob-min.js"></script>
     <script src="js/bmob/bmobSocketIo-min.js"></script>
     <script src="js/test.js"></script>
 </head>
 <body>
-
+<div class="eevee">
+    <div class="body">
+        <div class="head">
+            <div class="ears">
+                <div class="ear">
+                    <div class="lobe"></div>
+                </div>
+                <div class="ear">
+                    <div class="lobe"></div>
+                </div>
+            </div>
+            <div class="face">
+                <div class="eyes">
+                    <div class="eye">
+                        <div class="eyelid"></div>
+                    </div>
+                    <div class="eye">
+                        <div class="eyelid"></div>
+                    </div>
+                </div>
+                <div class="nose"></div>
+                <div class="mouth"></div>
+            </div>
+        </div>
+        <div class="chest">
+            <div class="fur">
+                <div class="patch"></div>
+            </div>
+            <div class="fur">
+                <div class="patch"></div>
+            </div>
+            <div class="fur">
+                <div class="patch"></div>
+            </div>
+        </div>
+        <div class="legs">
+            <div class="leg">
+                <div class="inner-leg"></div>
+            </div>
+            <div class="leg">
+                <div class="inner-leg"></div>
+            </div>
+            <div class="leg">
+                <div class="inner-leg"></div>
+            </div>
+            <div class="leg">
+                <div class="inner-leg"></div>
+            </div>
+        </div>
+        <div class="tail">
+            <div class="tail">
+                <div class="tail">
+                    <div class="tail">
+                        <div class="tail">
+                            <div class="tail -end"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h1>“萱萱游戏世界”<br /><span style="font-size:0.6em;">先占个地，老婆正在游戏策划中...</span></h1>
+<div id="info">
+    <input id="name" type="text" name="name" placeholder="访客名字"/><br />
+    <input id="msg" type="text" name="msg" placeholder="留句祝福呗！"/><br />
+    <a class="bt" href="javascript:void(0)" onclick="xuan.db.insertUser()">确定</a>
+</div>
+<div id="list">
+</div>
+<script >
+    (function () {
+        xuan.setup();
+    })()
+</script>
 </body>
 </html>

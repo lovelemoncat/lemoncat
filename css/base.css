@@ -1,0 +1,27 @@
+h1{
+  color:#8915CB;
+  text-align:center;
+}
+div#info{
+  text-align:center;
+
+}
+input{
+  width: 300px;
+  text-align:center;
+}
+.bt{
+    color:#8915CB;
+   width: 300px;
+   text-align:center;
+  width:300px;
+  font-size:20px;
+ }
+
+.bt:hover{
+  background-color:#8915CB;
+  color:white;
+}
+div.list{
+  background-color:white;
+}
