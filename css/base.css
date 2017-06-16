@@ -22,6 +22,23 @@ input{
   background-color:#8915CB;
   color:white;
 }
-div.list{
-  background-color:white;
+table#list{
+    width:100%;
+
+}
+td{
+/*    border-top:1px white solid;*/
+}
+table#list #list-name{
+    color:#8915CB;
+    text-align:right;
+    width:7em;
+}
+table#list #list-msg{
+    color:white;
+    text-align:left;
+}
+table#list #list-date{
+    color:gray;
+    text-align:right;
 }

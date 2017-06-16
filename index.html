@@ -80,8 +80,12 @@
     <input id="msg" type="text" name="msg" placeholder="留句祝福呗！"/><br />
     <a class="bt" href="javascript:void(0)" onclick="xuan.db.insertUser()">确定</a>
 </div>
-<div id="list">
-</div>
+<table id="list">
+    <tr style="background-color:#EAB0FB;">
+        <td id="list-name" style="color:black;">亲友姓名</td>
+        <td id="list-msg" style="color:black;">祝福语</td>
+        <td id="list-date" style="color:black;">留言时间</td></tr>
+</table>
 <script >
     (function () {
         xuan.setup();

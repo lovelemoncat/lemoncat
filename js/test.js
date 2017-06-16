@@ -23,21 +23,25 @@
         insertUser: function () {
             var _name = $("#name").val();
             var _msg = $("#msg").val();
-            if(_name=="" & _msg==""){
+            if(_name=="" | _msg==""){
                 alert('请留下“名字”和“祝福哦”');
                 return;
+            }else{
+                var testObject = new xuan.db.VisitXuan();
+                testObject.save({name: _name, msg: _msg}, {
+                    success: function (object) {
+                        alert("【"+object.get('name')+"】祝福已送@");
+                        $("#name").val("");
+                        $("#msg").val("");
+                        window.location.href="https://lovelemoncat.github.io/lemoncat/";
+                    },
+                    error: function (model, error) {
+
+                    }
+                });
             }
 
-            var testObject = new xuan.db.VisitXuan();
-            testObject.save({name: _name, msg: _msg}, {
-                success: function (object) {
-                    alert("【"+object.get('name')+"】祝福已送@");
-                    window.location.href="https://lovelemoncat.github.io/lemoncat/";
-                },
-                error: function (model, error) {
 
-                }
-            });
         },
         getUsers: function () {
 
@@ -47,11 +51,13 @@
                 success: function (results) {
                     //alert("共查询到 " + results.length + " 条记录");
                     // 循环处理查询到的数据
+                    console.log(results);
                     for (var i = 0; i < results.length; i++) {
                         var object = results[i];
 
-                            var temp ='<div>【<span id="list-name">'+object.get('name')+'</span>】' +
-                                '<span id="list-msg">'+object.get('msg')+'</span></div>';
+                            var temp ='<tr><td id="list-name">【'+object.get('name')+'】</td>' +
+                                '<td id="list-msg">'+object.get('msg')+'</td>' +
+                                '<td id="list-date">'+object.createdAt+'</td></tr>';
                         $('#list').append(temp);
                     }
                 },
